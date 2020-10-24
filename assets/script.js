@@ -3,14 +3,14 @@
 // var startButton = document.getElementById("startButton");
 // startButton.onclick().style.display;
 
-var questions = [
-    question: "variables can store a string, array and______?.",
-    answer: [
+// var questions = [
+//     question: "variables can store a string, array and______?.",
+//     answer: [
 
-    ]
+//     ]
 
 
-]
+// ]
 
 // *****************************
 //       Button Functions 
@@ -27,7 +27,7 @@ function mouseDown(){
 // to hide it
 function mouseUp(){
     
-    document.getElementById('startContainer').style.display = 'none'
+    document.getElementById('startContainer').style.display = 'none';
 }
 
 // Question One Buttons Button Functions
@@ -37,58 +37,68 @@ function mouseDownQ1(){
 
 function mouseUpQ1(){
     
-    document.getElementById('q1').style.display = 'none'
+    document.getElementById('q1').style.display = 'none';
 }
 
 
 // Questions Two Button Functions
-function mouseDown(){
-    document.getElementById('q3').classList.remove("q1State");
+function mouseDownQ2(){
+    document.getElementById('q3').classList.remove("q3State");
 }
 
-function mouseUp(){
+function mouseUpQ2(){
     
-    document.getElementById('q2').style.display = 'none'
+    document.getElementById('q2').style.display = 'none';
 }
 
 // Questions Three Button Functions
-function mouseDown(){
-    document.getElementById('q4').classList.remove("q1State");
+function mouseDownQ3(){
+    document.getElementById('q4').classList.remove("q4State");
 }
 
-function mouseUp(){
+function mouseUpQ3(){
     
-    document.getElementById('q3').style.display = 'none'
+    document.getElementById('q3').style.display = 'none';
 }
 
 // Questions Four Button Functions
-function mouseDown(){
-    document.getElementById('q4').classList.remove("q1State");
+function mouseDownQ4(){
+    document.getElementById('q5').classList.remove("q5State");
 }
 
-function mouseUp(){
+function mouseUpQ4(){
     
-    document.getElementById('q5').style.display = 'none'
+    document.getElementById('q4').style.display = 'none';
 }
 
 // Questions Five Button Functions
-function mouseDown(){
-    document.getElementById('q5').classList.remove("q1State");
+function mouseDownQ5(){
+    document.getElementById('q6').classList.remove("q5State");
 }
+// need to reveal score then Initial box
 
-function mouseUp(){
+// Need to go to high score page
+function mouseUpQ5(){
     
-    document.getElementById('startContainer').style.display = 'none'
+    document.getElementById('startContainer').style.display = 'none';
 }
 
 
 // *****************************
 //       Timer Functions 
 // *****************************
+var timerSec = 6000;
+var timeLeft = [i];
+for (i = 6000; i <= timerSec; i--);
+
+document.getElementById('timerSecID').append(timeLeft)
+     
+
+
 
 // Need to set a 60 second timer
-var totalTime = 6000
-var timeLeft;
-function startTimer() {
-    if (timeLeft = 0)
-}
+// var totalTime = 6000
+// var timeLeft;
+// function startTimer() {
+//     if (timeLeft = 0)
+// }

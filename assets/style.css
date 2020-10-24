@@ -3,12 +3,28 @@
 .selector-for-some-widget {
     box-sizing: content-box;
   }
-
+/**************************************
+    States section
+This section is for changes
+to div states from none to block    
+**************************************/
 .q1State {
     display: none;
     
 }
 .q2State {
+    display: none;
+    
+}
+.q3State {
+    display: none;
+    
+}
+.q4State {
+    display: none;
+    
+}
+.q5State {
     display: none;
     
 }
