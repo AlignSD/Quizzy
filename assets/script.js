@@ -10,11 +10,13 @@
 //     ]
 
 
-// ]
+// ]    
 
 // *****************************
 //       Button Functions 
 // *****************************
+
+// need to set wrong answer button classes to wrong and have them deduct time
 
 // START BUTTON Button Functions
 
@@ -87,6 +89,12 @@ function mouseUpQ5(){
 // *****************************
 //       Timer Functions 
 // *****************************
+// 00000000000000000000000000
+// This starts timer on button click of #startButton
+document.getElementById("startButton").onclick = setTime;
+// need to deduct time for wrong button clicks
+
+// time left needs to equal score at the end
 
 var timeLeft = 5;
 var timeEl = document.querySelector("#timerSecID");
@@ -102,14 +110,16 @@ function setTime() {
         sendMessage();
     
 // This section causes all containers for questions and the start screen to change
-// its display to none
+// its display to none after timer runs out 
 
     var x = document.querySelectorAll("#startContainer,#q6,#q5,#q4,#q3,#q2,#q1");
     var i;
         for (i = 0; i < x.length; i++) {
     x[i].style.display = 'none';
 }
-  
+//   0000000000000000000000000000000000000000000
+//  see if you can get i to change the display of the results container to show maybe
+
     }}, 1000);
 }     
 
@@ -121,8 +131,8 @@ function sendMessage() {
     mainEl.appendChild(imgEl);
   
   }
+//   This starts 
   
-  setTime();
        
 
 
