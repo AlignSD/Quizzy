@@ -76,7 +76,7 @@ function mouseUpQ5(){
 // *****************************
 //       Timer Functions 
 // *****************************
-// 00000000000000000000000000
+
 // This starts timer on button click of #startButton
 document.getElementById("startButton").onclick = setTime;
 // need to deduct time for wrong button clicks
@@ -95,6 +95,8 @@ function setTime() {
       if(timeLeft === 0) {
         clearInterval(timerInterval);
         sendMessage();
+        // Makes final  score page display when time runs out
+        document.getElementById('storeScore').style.display = 'inline'
     
 // This section causes all containers for questions and the start screen to change
 // its display to none after timer runs out 
