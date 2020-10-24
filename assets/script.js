@@ -87,12 +87,34 @@ function mouseUpQ5(){
 // *****************************
 //       Timer Functions 
 // *****************************
-var timerSec = 6000;
-var timeLeft = [i];
-for (i = 6000; i <= timerSec; i--);
 
-document.getElementById('timerSecID').append(timeLeft)
-     
+var timeLeft = 60;
+var timeEl = document.querySelector("#timerSecID");
+var mainEl = document.getElementById("timerContainer");
+
+function setTime() {
+    var timerInterval = setInterval(function() {
+      timeLeft--;
+      timeEl.textContent = timeLeft;
+  
+      if(timeLeft === 0) {
+        clearInterval(timerInterval);
+        sendMessage();
+      }
+  
+    }, 1000);
+}     
+  
+function sendMessage() {
+    timeEl.textContent = " ";
+  
+    var imgEl = document.createElement("img");
+    mainEl.appendChild(imgEl);
+  
+  }
+  
+  setTime();
+       
 
 
 
