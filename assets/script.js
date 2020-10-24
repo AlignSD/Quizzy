@@ -88,7 +88,7 @@ function mouseUpQ5(){
 //       Timer Functions 
 // *****************************
 
-var timeLeft = 60;
+var timeLeft = 5;
 var timeEl = document.querySelector("#timerSecID");
 var mainEl = document.getElementById("timerContainer");
 
@@ -100,11 +100,20 @@ function setTime() {
       if(timeLeft === 0) {
         clearInterval(timerInterval);
         sendMessage();
-      }
+    
+// This section causes all containers for questions and the start screen to change
+// its display to none
+
+    var x = document.querySelectorAll("#startContainer,#q6,#q5,#q4,#q3,#q2,#q1");
+    var i;
+        for (i = 0; i < x.length; i++) {
+    x[i].style.display = 'none';
+}
   
-    }, 1000);
+    }}, 1000);
 }     
-  
+
+// This section is part of the countdown
 function sendMessage() {
     timeEl.textContent = " ";
   
