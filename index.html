@@ -94,9 +94,20 @@
                     onmouseup="mouseUpQ5()">Learn more</button>
                 </div> 
         </div>         
-        
-        <div id="storeScore">
+        <!-- After questions are answered we need to make a input for initials and score -->
             
+        <div id="storeScore" class="scoreState">
+            <h1 id="finalScore">final score</h1>
+            <forms>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Please Enter Your Initials</label>
+                    <textarea class="form-control mx-auto col-4 text-center" id="initialForm" rows="1" placeholder="Initials"></textarea>
+                  </div>
+                  <!-- After initials we need to change to the Leaderboard page! -->
+                  <!-- Submit button executes onclick to relocate user to high scores page -->
+                  <button class="btn btn-primary" onclick="location.href='HighScore.html'" type="button">
+                    Submit</button>
+            </forms>
         </div>
             
     </div>
@@ -110,8 +121,7 @@
     </div>
     
 
-<!-- After questions are answered we need to make a input for initials and score -->
-            <!-- After initials we need to change to the Leaderboard page! -->
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>

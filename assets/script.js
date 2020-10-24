@@ -1,22 +1,9 @@
-// on click start button changes state to 1 question container.
-
-// var startButton = document.getElementById("startButton");
-// startButton.onclick().style.display;
-
-// var questions = [
-//     question: "variables can store a string, array and______?.",
-//     answer: [
-
-//     ]
-
-
-// ]    
 
 // *****************************
 //       Button Functions 
 // *****************************
 
-// need to set wrong answer button classes to wrong and have them deduct time
+
 
 // START BUTTON Button Functions
 
@@ -131,7 +118,29 @@ function sendMessage() {
     mainEl.appendChild(imgEl);
   
   }
-//   This starts 
+
+// *****************************
+//       Scoring Functions 
+// *****************************
+
+// need to set wrong answer button classes to wrong and have them deduct time
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    let elements = []
+    let container = document.querySelector('#containerLeaderBoard')
+    // Add each row to the array
+    container.querySelectorAll('.row').forEach(el => elements.push(el))
+    // Clear the container
+    container.innerHTML = ''
+    // Sort the array from highest to lowest
+    elements.sort((a, b) => b.querySelector('.score').textContent - a.querySelector('.score').textContent)
+    // Put the elements back into the container
+    elements.forEach(e => container.appendChild(e))
+  })
+
   
        
 
