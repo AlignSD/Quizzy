@@ -1,8 +1,11 @@
 
+
 // *****************************
 //       Button Functions 
 // *****************************
 
+
+    // your code 
 
 
 // START BUTTON Button Functions
@@ -62,14 +65,14 @@ function mouseUpQ4(){
 
 // Questions Five Button Functions
 function mouseDownQ5(){
-    document.getElementById('q6').classList.remove("q5State");
+    document.getElementById('q5').classList.add("q5state");
 }
 // need to reveal score then Initial box
 
 // Need to go to high score page
 function mouseUpQ5(){
     
-    document.getElementById('startContainer').style.display = 'none';
+    document.getElementById('storeScore').style.display = 'inline';
 }
 
 
@@ -83,11 +86,12 @@ document.getElementById("startButton").onclick = setTime;
 
 // time left needs to equal score at the end
 
-var timeLeft = 5;
+var timeLeft = 10;
 var timeEl = document.querySelector("#timerSecID");
 var mainEl = document.getElementById("timerContainer");
 
 function setTime() {
+    
     var timerInterval = setInterval(function() {
       timeLeft--;
       timeEl.textContent = timeLeft;
@@ -108,49 +112,62 @@ function setTime() {
 }
 //   0000000000000000000000000000000000000000000
 //  see if you can get i to change the display of the results container to show maybe
-
+document.querySelector('#wrong').addEventListener('click', function() {
+    timeLeft - 5;})
     }}, 1000);
+    
 }     
 
+    
 // This section is part of the countdown
-function sendMessage() {
-    timeEl.textContent = " ";
-  
-    var imgEl = document.createElement("img");
-    mainEl.appendChild(imgEl);
-  
-  }
 
+function sendMessage(){}
+//     timeEl.textContent = " ";
+  
+//     var imgEl = document.createElement("img");
+//     mainEl.appendChild(imgEl);
+  
+//   }
+
+    // Displaying the value
+ 
+
+  
 // *****************************
 //       Scoring Functions 
 // *****************************
 
-// need to set wrong answer button classes to wrong and have them deduct time
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    let elements = []
-    let container = document.querySelector('#containerLeaderBoard')
-    // Add each row to the array
-    container.querySelectorAll('.row').forEach(el => elements.push(el))
-    // Clear the container
-    container.innerHTML = ''
-    // Sort the array from highest to lowest
-    elements.sort((a, b) => b.querySelector('.score').textContent - a.querySelector('.score').textContent)
-    // Put the elements back into the container
-    elements.forEach(e => container.appendChild(e))
-  })
-
-  
+// when user inputs initials save to local storage.
+console.log(localStorage);
+localStorage.setItem("name", "#inpKey" );  
        
 
 
+const inpKey = document.getElementById("inpKey");
+const inpValue = document.getElementById("inpValue");
+const submitbtn = document.getElementById("btnInsert");
+const lsOutput = document.getElementById("lsOutput");
 
-// Need to set a 60 second timer
-// var totalTime = 6000
-// var timeLeft;
-// function startTimer() {
-//     if (timeLeft = 0)
-// }
+// trying to get local storage to work across pages
+
+btnInsert.onclick = function (){
+    const key = inpKey.value;
+    const value = inpValue.value;
+    location.href = "HighScore.html";
+
+    console.log(key);
+    console.log(value);
+
+    if (key && value) {
+        localStorage.setItem(key, value);
+        location.reload();
+    }
+
+}
+
+for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    const value = localStorage.getItem(key);
+
+    // lsOutput.innerHTML += key ,value;
+}

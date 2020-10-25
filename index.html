@@ -62,50 +62,50 @@
                     onmouseup="mouseUpQ3()">Div</button>
                     <button class="btn btn-primary btn-lg" href="#" id="wrong"  role="button"  onMouseDown="mouseDownQ3()" 
                     onmouseup="mouseUpQ3()">a</button>
-                    <button class="btn btn-primary btn-lg" href="#" id="wrong"  role="button"  onMouseDown="mouseDownQ3()" 
+                    <button class="btn btn-primary btn-lg" href="#" id="right"  role="button"  onMouseDown="mouseDownQ3()" 
                     onmouseup="mouseUpQ3()">href</button>
                     <button class="btn btn-primary btn-lg" href="#" id="wrong"  role="button"  onMouseDown="mouseDownQ3()" 
                     onmouseup="mouseUpQ3()">footer</button>
                 </div> 
         </div>         
         <div id="q4" class="q4State">   
-            <p>Second Set Of Questions.</p>
+            <p>Which company developed JavaScript?</p>
                 <div class="container row-sm-8 center">
+                    <button class="btn btn-primary btn-lg" href="#" id="right"  role="button"  onMouseDown="mouseDownQ4()" 
+                    onmouseup="mouseUpQ4()">Netscape</button>
                     <button class="btn btn-primary btn-lg" href="#" id="wrong"  role="button"  onMouseDown="mouseDownQ4()" 
-                    onmouseup="mouseUpQ4()">Learn more</button>
+                    onmouseup="mouseUpQ4()">Google</button>
                     <button class="btn btn-primary btn-lg" href="#" id="wrong"  role="button"  onMouseDown="mouseDownQ4()" 
-                    onmouseup="mouseUpQ4()">Learn more</button>
+                    onmouseup="mouseUpQ4()">Twitter</button>
                     <button class="btn btn-primary btn-lg" href="#" id="wrong"  role="button"  onMouseDown="mouseDownQ4()" 
-                    onmouseup="mouseUpQ4()">Learn more</button>
-                    <button class="btn btn-primary btn-lg" href="#" id="wrong"  role="button"  onMouseDown="mouseDownQ4()" 
-                    onmouseup="mouseUpQ4()">Learn more</button>
+                    onmouseup="mouseUpQ4()">Apple</button>
                 </div> 
         </div>         
         <div id="q5" class="q5State">   
-            <p>Second Set Of Questions.</p>
+            <p> How can you convert the string of any base to integer in JavaScript?</p>
                 <div class="container row-sm-8 center">
                     <button class="btn btn-primary btn-lg" href="#" id="wrong"  role="button"  onMouseDown="mouseDownQ5()" 
-                    onmouseup="mouseUpQ5()">Learn more</button>
+                    onmouseup="mouseUpQ5()">append()</button>
                     <button class="btn btn-primary btn-lg" href="#" id="wrong"  role="button"  onMouseDown="mouseDownQ5()" 
-                    onmouseup="mouseUpQ5()">Learn more</button>
+                    onmouseup="mouseUpQ5()">innerHtml()</button>
+                    <button class="btn btn-primary btn-lg" href="#" id="right"  role="button"  onMouseDown="mouseDownQ5()" 
+                    onmouseup="mouseUpQ5()">parseInt()</button>
                     <button class="btn btn-primary btn-lg" href="#" id="wrong"  role="button"  onMouseDown="mouseDownQ5()" 
-                    onmouseup="mouseUpQ5()">Learn more</button>
-                    <button class="btn btn-primary btn-lg" href="#" id="wrong"  role="button"  onMouseDown="mouseDownQ5()" 
-                    onmouseup="mouseUpQ5()">Learn more</button>
+                    onmouseup="mouseUpQ5()">getItemById()</button>
                 </div> 
         </div>         
         <!-- After questions are answered we need to make a input for initials and score -->
             
         <div id="storeScore" class="scoreState">
-            <h1 id="finalScore">final score</h1>
+            <h1 id="inpValue">final score</h1>
             <forms>
-                <div class="form-group">
+                <div class="form-group">    
                     <label for="exampleFormControlTextarea1">Please Enter Your Initials</label>
-                    <textarea class="form-control mx-auto col-4 text-center" id="initialForm" rows="1" placeholder="Initials"></textarea>
+                    <input class="form-control mx-auto col-4 text-center" id="inpKey" rows="1" placeholder="Initials"></input>
                   </div>
                   <!-- After initials we need to change to the Leaderboard page! -->
                   <!-- Submit button executes onclick to relocate user to high scores page -->
-                  <button class="btn btn-primary" onclick="location.href='HighScore.html'" type="button">
+                  <button class="btn btn-primary" onclick="location.href='HighScore.html'" id="btnInsert" type="button">
                     Submit</button>
             </forms>
         </div>
@@ -117,7 +117,7 @@
         
     <div class='timer text-center' id='timerContainer'>
         <div class="timeText">Time Left</div>
-        <div class="timerSec" id='timerSecID'>60</div>
+        <div class="timerSec" id='timerSecID'>10</div>
     </div>
     
 
